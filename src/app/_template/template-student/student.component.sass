@@ -1,0 +1,68 @@
+@import '../../../sass/var'
+
+// ##########################################################
+// ##########################################################
+// ##########################################################
+
+.student
+    width: 100%
+    background-color: $white
+    margin: 0 0 $cube 0
+    display: flex
+    flex-flow: row
+    justify-content: space-between
+    align-items: stretch
+    height: 100%
+    .student-detail
+        width: 100%
+        display: flex
+        flex-flow: row
+        justify-content: flex-start
+        align-items: center
+        .student-detail-check
+            display: flex
+            margin: $cube*2
+            flex-flow: row
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            img
+                width: $cube*4
+                height: $cube*4
+        .student-detail-titel
+            width: 100%
+            input
+                font-family: $font2
+                font-size: $cube*2
+                padding: $cube*2
+                color: $second
+                width: 100%
+                border: none
+                word-break: break-word
+            input::placeholder
+                opacity: 0.5
+                font-style: italic
+            input:focus
+                outline: none
+    .delete
+        background-color: $red
+        color: $white
+        font-family: $font2
+        font-size: $cube*2
+        padding: $cube*2
+        cursor: pointer
+        span
+            height: 100%
+            width: 100%
+            display: flex
+            flex-flow: row
+            justify-content: center
+            align-items: center
+.student.present
+    .todo-content
+        .handle
+            display: none
+        .todo-content-titel
+            input
+                opacity: 0.3
+                text-decoration: line-through

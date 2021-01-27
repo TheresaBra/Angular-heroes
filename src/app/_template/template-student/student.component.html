@@ -1,0 +1,17 @@
+<div class="student" [class.done] ="student$.status">
+    <div class="student-detail">
+        <div class="handle">
+            <img src="./assets/svg/drag.svg">
+        </div>
+        <div class="student-detail-check">
+            <img *ngIf="!student$.status" (click)="changeCheck($event)" src="./assets/svg/checkbox-empty.svg">
+            <img *ngIf="student$.status" (click)="changeCheck($event)" src="./assets/svg/checkbox-done.svg">
+        </div>
+        <div class="student-detail-titel">
+            <input (blur)="changeName" type="text" [(ngModel)]="student$.name" placeholder="Name of the student" (blur)="changeName($event)">
+        </div>
+    </div>
+    <div class="delete"(click)="deleteStudent($event)">
+        <span>Delete</span>
+    </div>
+</div>

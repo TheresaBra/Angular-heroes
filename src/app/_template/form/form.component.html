@@ -1,0 +1,8 @@
+<div class="student-form">
+    <div class="student-detail">
+        <input type="text" [(ngModel)]="student$.name" placeholder="Name of the student" (keyup.enter)="createStudent($event)">
+    </div>
+    <div class="create" (click)="createStudent($event)">
+        <span>Create</span>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<app-header></app-header>
+<div class="list-view">
+    <h4 (click)="studentShow=!studentShow">Registered students<span>({{$students.length}})</span></h4>
+    <div *ngIf="studentShow" class="student">
+        <app-template-student (ping)="update($event)" [student$]="student" *ngFor="let student of $students"></app-template-student>
+    </div>
+    <app-form  (ping)="create($event)" *ngIf="studentShow"></app-form>
+    <h4 (click)="studentPresentShow=!studentPresentShow">Attending students<span>({{$studentsPresent.length}})</span></h4>
+    <div *ngIf="studentPresentShow" class="student">
+        <app-template-student (ping)="update($event)" [student$]="student" *ngFor="let student of $studentsPresent"></app-template-student>
+    </div>
+</div>
